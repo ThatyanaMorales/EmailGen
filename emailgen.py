@@ -1,5 +1,5 @@
-# With Love by Thatyana Morales July 2018 
-#
+# With Love by Thatyana Morales July 2018
+# Updated January 2020
 # python emailgen.py [list of names] [results file name] [domain] [email format]
 # This is a script to be run on the command line
 # This script is to create an email list given a list of users. It supports john.smith (first name + . + last name), and jsmith (first initial last name)
@@ -23,11 +23,12 @@ for line in fp:
 	else:
 		nameArray = re.split(' ', line)
 		firstName = nameArray[0]
-		lastName = nameArray[1]
+		lastName = nameArray[1].rstrip()
+		full = firstName[:1] + "" + lastName + "@" + domain
 		if sys.argv[4] == "john.smith": #firstname.lastname
-			fp2.write((firstName + "." + lastName + "@" + domain + "\n").lower())
+			fp2.write((full + "\n").lower())
 		elif sys.argv[4] == "jsmith": #firstInitial + LastName
-			fp2.write((firstName[:1] + lastName + "@" + domain + "\n").lower())
+			fp2.write((full + "\n").lower())
 
 fp.close()
 fp2.close()
