@@ -1,15 +1,19 @@
 # EmailGen
-This script is to create an email list given a list of users. The command-line layout is detailed below:
+This script is to create an email list given a list of users.
 
-python emailgen.py {list of names} {results file name} {domain} {email format}
+# Usage
 
-It supports john.smith (first name + . + last name), and jsmith (first initial last name)
-Example:
+python emailgen.py {list of names} {results file name} {domain} {email format}<br />
+
+{list of names}: file with names<br />
+{results file name}: file to output email list<br />
+{domain}: domain of company<br />
+{email format}: jsmith or john.smith
+
+# Example:
 
 python emailgen.py names.txt results.txt company.com john.smith<br />
 python emailgen.py users.txt results.csv company.net jsmith
-
-Note: the last parameter must be in terms of John Smith (so the parameter can only either be john.smith or jsmith)
 
 The text file with the list of names should only be first and last name and each entry separated by a newline (middle names are not yet supported):
 
