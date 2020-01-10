@@ -5,10 +5,10 @@ This script is to create an email list given a list of users.
 
 python emailgen.py {list of names} {results file name} {domain} {email format}<br />
 
-{list of names}: file with names<br />
-{results file name}: file to output email list<br />
-{domain}: domain of company<br />
-{email format}: jsmith or john.smith
+**{list of names}**: file with names<br />
+**{results file name}**: file to output email list<br />
+**{domain}**: domain of company<br />
+**{email format}**: jsmith or john.smith
 
 # Example:
 
